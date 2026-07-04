@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Intelligence</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>📄 AI Document Intelligence</h1>
+            <p>Upload documents and ask questions with intelligent retrieval</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <h2>Upload Document</h2>
+                <div class="upload-area" id="uploadArea">
+                    <p>Drag and drop your PDF or TXT file here</p>
+                    <p class="or-text">or</p>
+                    <button class="button button-primary" id="browseBtn">Browse Files</button>
+                    <input type="file" id="fileInput" accept=".pdf,.txt" style="display: none;">
+                </div>
+                <div id="uploadStatus" class="status-message" style="display: none;"></div>
+                <div id="uploadProgress" class="progress-bar" style="display: none;">
+                    <div class="progress-fill"></div>
+                </div>
+            </section>
+
+            <!-- Query Section -->
+            <section class="query-section" id="querySection" style="display: none;">
+                <h2>Ask Questions</h2>
+                <div class="document-info" id="documentInfo"></div>
+                
+                <div class="chat-container">
+                    <div class="messages" id="messages"></div>
+                </div>
+
+                <div class="input-area">
+                    <input 
+                        type="text" 
+                        id="questionInput" 
+                        placeholder="Ask a question about the document..."
+                        class="question-input"
+                    >
+                    <button id="askBtn" class="button button-primary">Ask</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>AI Document Intelligence Demo v0.1.0</p>
+            <p><small>Made with ❤️ using RAG and ChromaDB</small></p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
