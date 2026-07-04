@@ -1,0 +1,165 @@
+# Sample Python Guide
+
+## Introduction to Python
+
+Python is a high-level, interpreted programming language created by Guido van Rossum in 1989. It emphasizes code readability and simplicity, making it an excellent choice for beginners and experienced programmers alike.
+
+### Why Python?
+
+- **Easy to Learn**: Simple, intuitive syntax
+- **Versatile**: Used for web, data science, AI, automation
+- **Large Community**: Extensive libraries and frameworks
+- **Open Source**: Free to use and modify
+
+## Installation and Setup
+
+### Windows
+
+1. Download from python.org
+2. Run installer
+3. Check "Add Python to PATH"
+4. Click Install Now
+
+### macOS
+
+```bash
+brew install python3
+```
+
+### Linux
+
+```bash
+sudo apt-get install python3
+```
+
+## Basic Syntax
+
+### Variables and Data Types
+
+```python
+# Variables
+name = "Alice"
+age = 25
+height = 5.6
+is_student = True
+
+# Lists
+fruits = ["apple", "banana", "orange"]
+
+# Tuples
+point = (10, 20)
+
+# Dictionaries
+person = {"name": "Bob", "age": 30}
+
+# Sets
+unique_numbers = {1, 2, 3, 3, 2}  # {1, 2, 3}
+```
+
+## Control Flow
+
+### If Statements
+
+```python
+if age < 18:
+    print("You are a minor")
+elif age < 65:
+    print("You are an adult")
+else:
+    print("You are a senior")
+```
+
+### Loops
+
+```python
+# For loop
+for i in range(5):
+    print(i)
+
+# While loop
+while count < 10:
+    count += 1
+```
+
+## Functions
+
+```python
+def greet(name):
+    """Greet someone by name"""
+    return f"Hello, {name}!"
+
+result = greet("Alice")
+
+# Default arguments
+def add(a, b=0):
+    return a + b
+
+# Keyword arguments
+add(5, b=3)
+```
+
+## Error Handling
+
+```python
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+except Exception as e:
+    print(f"Error: {e}")
+finally:
+    print("Cleanup code")
+```
+
+## Modules and Imports
+
+```python
+import math
+from datetime import datetime
+from collections import defaultdict as dd
+
+# Using module
+print(math.sqrt(16))  # 4.0
+
+# Using datetime
+now = datetime.now()
+```
+
+## Best Practices
+
+1. **Use meaningful variable names**: `user_count` instead of `x`
+2. **Follow PEP 8**: Python style guide
+3. **Write docstrings**: Document your functions
+4. **Handle errors gracefully**: Use try-except blocks
+5. **Test your code**: Write unit tests
+6. **Keep functions small**: Single responsibility principle
+
+## Common Patterns
+
+### List Comprehension
+
+```python
+squares = [x**2 for x in range(10)]
+even = [x for x in range(10) if x % 2 == 0]
+```
+
+### Decorators
+
+```python
+def timer(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        print(f"Time: {time.time() - start}s")
+        return result
+    return wrapper
+
+@timer
+def slow_function():
+    time.sleep(2)
+```
+
+---
+
+**Last Updated**: 2024
+**Author**: Python Learning Team
